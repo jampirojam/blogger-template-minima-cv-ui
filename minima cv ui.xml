@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:ccs='false' b:js='false'
+	xmlns='http://www.w3.org/1999/xhtml'
+	xmlns:b='http://www.google.com/2005/gml/b'
+	xmlns:data='http://www.google.com/2005/gml/data'
+	xmlns:expr='http://www.google.com/2005/gml/expr'>
+	<head>
+		<meta content='width=device-width, initial-scale=1' name='viewport'/>
+		<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'/>
+		<meta charset='utf-8'/>
+		<title>Curriculum Vitae</title>
+		<b:skin>
+			<![CDATA[
+			/* 
+		body {background:black;}
+		
+		]]>
+		</b:skin>
+		<style>
+        body {max-width:640px; margin:auto; text-align:center;}
+        #konten{max-width:98%;margin:10px}
+		
+		.bersih {clear:both}
+		
+		/* HEADER */
+		.header{background:#fff; box-shadow:0 10px 6px -6px #9e9e9e; height:auto; padding:5px 0 2px 0; border-radius:0 0 50px 50px;}
+		.header h1{font-family:Arial, Helvetica, sans-serif; font-size: 16px; color:#000; font-weight:700; text-align:center}
+		.navigation {}
+		
+		/* CONTENT */
+		.content {font-size: 14px; padding:2px}
+		
+		.profil {padding:5px; text-align:center;}
+		.profil .nama{font-weight:700;}
+		.profil img{display:block; max-width:100px; width:100%; height:auto; margin-left:auto; margin-right:auto; border:2px solid #000; border-radius:25px;}
+		.profil ul{list-style:none; margin:0; padding:0; display:grid; grid-template-columns: 50% 50%; align-items:center; justify-content:space-evenly; width:100%; padding:5px; background-color:transparent; -webkit-tap-highlight-color: transparent;}
+		.profil ul li{text-align:center; outline: none; display:inline-block; padding:5px}
+		.profil ul li a:link{text-decoration:none}
+		
+		.judul {text-align:left; font-size: 14px; font-weight:700; padding-bottom: 10px }
+		
+		.tentang {text-align:justify; font-size: 14px; line-height:24px; padding:5px}
+		
+		.kemampuan {padding:5px;}
+		.kemampuan ul{list-style:square; margin:0; padding:0; justify-content:space-evenly; padding:5px 15px;}
+		.kemampuan ul li{display:list-item;text-align:justify; outline: none; line-height:24px;}
+		
+		.kerja{text-align:justify; font-size: 14px; line-height:24px; padding:5px}
+		.kerja .tempat{text-align:left; line-height:24px; font-weight:700; display:inline}
+		.kerja .alamat{text-align:left; display:inline}	
+		.kerja .jabatan{text-align:left; font-style:italic; display:inline}		
+		.kerja .tahun{text-align:left; display:inline}				
+		.kerja .alamat:before, .kerja .tahun:before{content:&quot; | &quot;}		
+		.kerja ul{list-style:square; margin:0; padding:0; justify-content:space-evenly; padding:5px 15px;}
+		.kerja ul li{display:list-item; text-align:justify; outline: none; line-height:24px;}
+				
+		.pendidikan{text-align:justify; font-size: 14px; line-height:24px; padding:5px}
+		.pendidikan .tempat{text-align:left; line-height:24px; font-weight:700; display:inline}
+		.pendidikan .alamat{text-align:left; display:inline}	
+		.pendidikan .jurusan{text-align:left; font-style:italic; display:inline}		
+		.pendidikan .tahun{text-align:left; display:inline}				
+		.pendidikan .alamat:before, .pendidikan .tahun:before{content:&quot; | &quot;}		
+		.pendidikan ul{list-style:square; margin:0; padding:0; justify-content:space-evenly; padding:5px 15px;}
+		.pendidikan ul li{display:list-item;text-align:justify; outline: none; line-height:24px;}
+		
+		.organisasi{text-align:justify; font-size: 14px; line-height:24px; padding:5px}
+		.organisasi .tempat{text-align:left; line-height:24px; font-weight:700; display:inline}
+		.organisasi .jabatan{text-align:left; font-style:italic; display:inline}		
+		.organisasi .tahun{text-align:left; display:inline}				
+		.organisasi .tahun:before{content:&quot; | &quot;}
+
+		.sertifikasi{text-align:justify; font-size: 14px; line-height:24px; padding:5px}
+		.sertifikasi .nama{text-align:left; line-height:24px; font-weight:700;}
+		.sertifikasi .penyelenggara{text-align:left; font-style:italic;}			
+		.sertifikasi ul{list-style:square; margin:0; padding:0; justify-content:space-evenly; padding:5px 15px;}
+		.sertifikasi ul li{display:list-item;text-align:justify; outline: none; line-height:24px;}
+		
+		/* FOOTER */
+		#footer {display:flex;position:sticky; position: -webkit-sticky; bottom:0; height:50px; align-items:center; -webkit-tap-highlight-color: transparent; justify-content:space-evenly; z-index:99; background:#fff;  box-shadow:0 -6px 6px 0 #9e9e9e; border-radius:50px 50px 0 0;border:2px solid #000; border-radius:25px;}
+		#footer &gt; ikontok{width:20%; height:auto; text-align:center;}
+		svg{fill:#000; height:auto;width:30px}
+		/* RESPONSIVE */
+		@media screen and (max-width:480px){
+			.profil img{display:block; max-width:75px; width:100%; height:auto; margin-left:auto; margin-right:auto;}
+			.profil ul{list-style:none; margin:0; padding:0; display:block; align-items:center; justify-content:space-evenly; width:100%; padding:5px 0 0 0; background-color:transparent; -webkit-tap-highlight-color: transparent;}
+			.profil ul li{text-align:center; outline: none; display:block; width:100%;}
+			
+			.kerja .tempat, .kerja .jabatan{display:block}
+			.kerja .alamat:before, .kerja .tahun:before{display:none}
+			
+			.pendidikan .tempat, .pendidikan .jurusan{display:block}
+			.pendidikan .alamat:before, .pendidikan .tahun:before{display:none}
+			
+			.organisasi .tempat, .organisasi .jabatan{display:block}
+			.organisasi .tahun:before{display:none}
+						
+			svg{fill:#000; height:auto;width:25px}
+		}
+      </style>
+	</head>
+	<body>
+		<b:section class='main' id='main' showaddelement='yes'/>
+		<div id='konten'>
+			<div class='header'>
+				<h1>CURRICULUM VITAE</h1>
+				<div class='navigation'></div>
+			</div>
+			<div class='content'>
+				<div class='profil'>
+					<img src='https://1.bp.blogspot.com/-aSrU81fuAhw/YF1WvUoSvYI/AAAAAAAAFo4/fw9wAA84oRcbrswsp564IyvLx9iYoFgmQCLcBGAsYHQ/s0/mmasm.jpg'/>
+					<br/>
+					<a class='nama'>M. MACHRUSH ALIY SIROJJAM MUSHLICH</a>
+					<br/>
+					<ul>
+						<li>
+							<a>Gresik, 4 Mei 1996</a>
+						</li>
+						<li>
+							<a>Driyorejo, Gresik, 61177</a>
+						</li>
+						<li>
+							<a href='https://wa.me/6285731111311'>+62 857 31111311</a>
+						</li>
+						<li>
+							<a href='mailto:jampirojam@gmail.com'>jampirojam@gmail.com</a>
+						</li>
+					</ul>
+				</div>
+				<hr/>
+				<div class='tentang'>
+					<div class='judul'>TENTANG SAYA
+					</div>
+					<a>
+						Saya M. Machrush Aliy Sirojjam Mushlich, biasa dipanggil Ojam. Saya lulusan Sistem Informasi, Universitas Islam Negeri Sunan Ampel. Saya mempunyai pengalaman magang kerja di PT. Radio Merdeka Lokatama sebagai IT Support yang membantu merancang sistem jaringan terpusat untuk seluruh stasiun radio yang bergabung dengan Suzanna Network.
+					</a>
+				</div>
+				<hr/>
+				<div class='kemampuan'>
+					<div class='judul'>KEMAMPUAN
+					</div>
+					<ul>
+						<li>
+							<a>Microsoft Office</a>
+						</li>
+						<li>
+							<a>Menejemen Data</a>
+						</li>
+						<li>
+							<a>HTML, CSS, JavaScript, PHP, Java, C++, Pascal, MySQL, PostgreSQL</a>
+						</li>
+						<li>
+							<a>Analisis Forensik</a>
+						</li>
+						<li>
+							<a>Adobe (PhotoShop, InDesign, AfterEffect, Premiere)</a>
+						</li>
+					</ul>
+				</div>
+				<hr/>
+				<div class='pendidikan'>
+					<div class='judul'>PENDIDIKAN
+					</div>
+					<div class='tempat'>
+						Universitas Islam Negeri Sunan Ampel
+					</div>
+					<div class='alamat'>
+						Surabaya, Indonesia
+					</div>
+					<div class='bersih'/>
+					<div class='jurusan'>
+						Sistem Informasi
+					</div>
+					<div class='tahun'>
+						2015-2021
+					</div>
+					<ul>
+						<li>
+							<a>Pembimbing mahasiswa baru selama dua periode.</a>
+						</li>
+						<li>
+							<a>Penggagas berdirinya Lembaga Pers Mahasiswa (LPM) Riset.</a>
+						</li>
+						<li>
+							<a>Perwakilan kampus dalam MTQ Mahasiswa Nasional 2017 di Malang.</a>
+						</li>
+						<li>
+							<a>Aktif mengikuti semua kegiatan yang berhubungan dengan Himpunan Mahasiswa Program Studi Sistem Informasi.</a>
+						</li>
+					</ul>
+					<div class='tempat'>
+						Madrasah Aliyah Darussalam
+					</div>
+					<div class='alamat'>
+						Gresik, Indonesia
+					</div>
+					<div class='bersih'/>
+					<div class='jurusan'>
+						Ilmu Pengetahuan Alam (IPA)
+					</div>
+					<div class='tahun'>
+						2012-2015
+					</div>
+					<ul>
+						<li>
+							<a>Lulusan terbaik dengan rerata hasil ujian tertinggi satu sekolah serta diterima menjadi mahasiswa melalui jalur SNMPTN.</a>
+						</li>
+					</ul>
+				</div>
+				<hr/>
+				<div class='organisasi'>
+					<div class='judul'>PENGALAMAN ORGANISASI
+					</div>
+					<div class='tempat'>
+						Remaja Masjid Darun Najah
+					</div>
+					<div class='bersih'/>
+					<div class='jabatan'>
+						Sekretaris
+					</div>
+					<div class='tahun'>
+						2011-2019
+					</div>
+					<div class='bersih'/>
+					<div class='tempat'>
+						Pergerakan Mahasiswa Islam Indonesia (PMII)
+					</div>
+					<div class='bersih'/>
+					<div class='jabatan'>
+						Anggota
+					</div>
+					<div class='tahun'>
+						2015-2018
+					</div>
+					<div class='bersih'/>
+					<div class='tempat'>
+						Himpunan Mahasiswa Program Studi Sistem Informasi (HIMAPROSIF)
+					</div>
+					<div class='bersih'/>
+					<div class='jabatan'>
+						Sekretaris
+					</div>
+					<div class='tahun'>
+						2017-2018
+					</div>
+					<div class='bersih'/>
+					<div class='tempat'>
+						Lembaga Pers Mahasiswa (LPM) Riset
+					</div>
+					<div class='bersih'/>
+					<div class='jabatan'>
+						Pimpinan Redaksi
+					</div>
+					<div class='tahun'>
+						2017-2018
+					</div>
+				</div>
+				<hr/>
+				<div class='sertifikasi'>
+					<div class='judul'>SERTIFIKASI
+					</div>
+					<div class='nama'>
+						Test of Arabic as a Foreign Language (TOAFL)
+					</div>
+					<div class='penyelenggara'>
+						Pusat Pengembangan Bahasa Universitas Islam Negeri Sunan Ampel
+					</div>
+					<ul>
+						<li>
+							<a>Un.07/1PB/PP.01/3216/2016</a>
+						</li>
+						<li>
+							<a>November 2016-November 2018</a>
+						</li>
+					</ul>
+					<div class='nama'>
+						Administrating Database
+					</div>
+					<div class='penyelenggara'>
+						PT. Inixindo Persada Rekayasa Komputer
+					</div>
+					<ul>
+						<li>
+							<a>TIK 364 00425 2016</a>
+						</li>
+						<li>
+							<a>November 2016-November 2018</a>
+						</li>
+					</ul>
+					<div class='nama'>
+						Microsoft Office Specialist: PowerPoint 2013
+					</div>
+					<div class='penyelenggara'>
+						Certiport Indonesia
+					</div>
+					<ul>
+						<li>
+							<a>GwUH-4TY3</a>
+						</li>
+						<li>
+							<a>November 2017-Sekarang</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id='footer'>
+				<div class='ikontok'>
+					<a href='https://twitter.com/jampirojam' role='button' title='Twitter'>
+						<svg viewBox='0 0 24 24'
+							xmlns='http://www.w3.org/2000/svg'>
+							<path d='M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.5 8.778c-.441.196-.916.328-1.414.388.509-.305.898-.787 1.083-1.362-.476.282-1.003.487-1.564.597-.448-.479-1.089-.778-1.796-.778-1.59 0-2.758 1.483-2.399 3.023-2.045-.103-3.86-1.083-5.074-2.572-.645 1.106-.334 2.554.762 3.287-.403-.013-.782-.124-1.114-.308-.027 1.14.791 2.207 1.975 2.445-.346.094-.726.116-1.112.042.313.978 1.224 1.689 2.3 1.709-1.037.812-2.34 1.175-3.647 1.021 1.09.699 2.383 1.106 3.773 1.106 4.572 0 7.154-3.861 6.998-7.324.482-.346.899-.78 1.229-1.274z'/>
+						</svg>
+					</a>
+				</div>
+				<div class='ikontok'>
+					<a href='https://linkedin.com/in/jampirojam' role='button' title='LinkedIn'>
+						<svg viewBox='0 0 24 24'
+							xmlns='http://www.w3.org/2000/svg'>
+							<path d='M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 8c0 .557-.447 1.008-1 1.008s-1-.45-1-1.008c0-.557.447-1.008 1-1.008s1 .452 1 1.008zm0 2h-2v6h2v-6zm3 0h-2v6h2v-2.861c0-1.722 2.002-1.881 2.002 0v2.861h1.998v-3.359c0-3.284-3.128-3.164-4-1.548v-1.093z'/>
+						</svg>
+					</a>
+				</div>
+				<div class='ikontok'>
+					<a href='https://facebook.com/jampirojam' role='button' title='Facebook'>
+						<svg viewBox='0 0 24 24'
+							xmlns='http://www.w3.org/2000/svg'>
+							<path d='M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 10h-2v2h2v6h3v-6h1.82l.18-2h-2v-.833c0-.478.096-.667.558-.667h1.442v-2.5h-2.404c-1.798 0-2.596.792-2.596 2.308v1.692z'/>
+						</svg>
+					</a>
+				</div>
+				<div class='ikontok'>
+					<a href='https://instagram.com/jampirojam' role='button' title='Instagram'>
+						<svg viewBox='0 0 24 24'
+							xmlns='http://www.w3.org/2000/svg'>
+							<path d='M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.615 6h-9.23c-.766 0-1.385.62-1.385 1.384v9.23c0 .766.619 1.386 1.385 1.386h9.23c.766 0 1.385-.62 1.385-1.385v-9.23c0-.765-.619-1.385-1.385-1.385zm-4.615 3.693c1.274 0 2.309 1.032 2.309 2.307s-1.035 2.307-2.309 2.307-2.307-1.033-2.307-2.307 1.033-2.307 2.307-2.307zm4.5 6.346c0 .255-.207.461-.461.461h-8.078c-.254 0-.461-.207-.461-.461v-5.039h.949c-.045.158-.078.32-.102.486-.023.168-.038.339-.038.514 0 2.04 1.652 3.693 3.691 3.693s3.691-1.653 3.691-3.693c0-.174-.015-.346-.039-.514-.023-.166-.058-.328-.102-.486h.95v5.039zm0-6.991c0 .255-.207.462-.461.462h-1.088c-.256 0-.461-.208-.461-.462v-1.087c0-.255.205-.461.461-.461h1.088c.254 0 .461.207.461.461v1.087z'/>
+						</svg>
+					</a>
+				</div>
+				<div class='ikontok'>
+					<a href='https://brojamz.blogspot.com' role='button' title='Blogger'>
+						<svg height='24' viewBox='0 0 24 24' width='24'
+							xmlns='http://www.w3.org/2000/svg'>
+							<path d='M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.407 10.516h-.975c-.5 0-.592-.382-.592-.854.001-2.023-1.636-3.662-3.655-3.662h-2.53c-2.018 0-3.655 1.639-3.655 3.662v4.676c0 2.023 1.637 3.662 3.654 3.662h4.692c2.017 0 3.654-1.639 3.654-3.662v-3.229c0-.328-.267-.593-.593-.593zm-7.714-1.516h2.113c.384 0 .694.335.694.75s-.31.75-.693.75h-2.114c-.382 0-.693-.335-.693-.75s.311-.75.693-.75zm4.566 6h-4.519c-.409 0-.74-.335-.74-.75 0-.414.331-.75.74-.75h4.519c.41 0 .741.335.741.75s-.331.75-.741.75z'/>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
